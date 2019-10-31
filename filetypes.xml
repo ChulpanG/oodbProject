@@ -1,0 +1,13 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="PersonController" type="CLASS" />
+      <mapping pattern="NewPerceptron" type="CLASS" />
+      <mapping ext="personcontroller" type="CLASS" />
+      <mapping pattern="Perceptron" type="JAVA" />
+      <mapping pattern="JsonParser" type="JAVA" />
+      <mapping pattern="DataPerceptron" type="JAVA" />
+      <mapping pattern="Person" type="JAVA" />
+    </extensionMap>
+  </component>
+</application>
