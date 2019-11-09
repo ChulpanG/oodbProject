@@ -10,8 +10,7 @@ public class Dish {
     int dishID;
     String dishName;
     double price;
-    List<ProductDish> productDish;
-    ArrayList<Dish> order= new ArrayList();
+
 
     public Dish(int dishID,String dishName,double price){
         this.dishID = dishID;
@@ -29,13 +28,6 @@ public class Dish {
         return price;
     }
     public void getDishStructure(int dishID){
-
-    }
-    public void addDish(Dish dish){
-        order.add(dish);
-    }
-    public void removeDish(Dish dish){
-        order.remove(dish);
 
     }
 }

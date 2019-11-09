@@ -20,20 +20,7 @@ import lab3.XMLParser;
 import org.xml.sax.SAXException;
 public class JsonParser{
 
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException, XMLStreamException, Exception {
 
-      String fileJson = "/Users/culpan/Desktop/PeopleJavaJson.json";
-      String fileXML = "/Users/culpan/Desktop/Users.xml";
-      //JsonParser(fileJson);
-      //JsonSortName(fileJson);
-      //JsonEdit(fileJson);
-      //JsonSearchName("Алина",fileJson);
-
-      //XMLParser.XMLParser(fileXML);
-      //XMLParser.XMLnew(fileXML);
-      //XMLParser.XMLSortByName(fileXML);
-      //XMLParser.XMLSearchObject("Алия",fileXML);
-    }
     //parse json file
     public static List<Person> JsonParser(String file) throws FileNotFoundException{
 
@@ -76,7 +63,7 @@ public class JsonParser{
             if (list.get(i).name.equals(name)){
                 System.out.println("ID: "+ list.get(i).personID
                         + ", Name: "+ list.get(i).name
-                        +", Surname: " + list.get(i).surname
+                        + ", Surname: " + list.get(i).surname
                         + ", Position: "+ list.get(i).position);
             }
         }

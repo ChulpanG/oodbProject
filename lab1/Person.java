@@ -14,8 +14,6 @@ public class Person {
     public String birthDate;
 
     private Integer personalCode;
-    ArrayList<Person>people = new ArrayList();
-
 
     public Person(Integer personID,String surname,String name,String position){
         this.personID = personID;

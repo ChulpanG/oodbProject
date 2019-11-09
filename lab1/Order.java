@@ -8,8 +8,8 @@ public class Order {
     private int orderID;
     private int waiterID;
     private String time;
-    ArrayList<Dish> order=new ArrayList();
-    Order(int orderID,int waiterID,String time,ArrayList<Dish> order){
+    List<Dish> order=new ArrayList();
+    Order(int orderID,int waiterID,String time,List<Dish> order){
         this.orderID = orderID;
         this.waiterID = waiterID;
         this.time = time;

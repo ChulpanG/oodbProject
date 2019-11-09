@@ -1,0 +1,3 @@
+{"Dish":[{"dishID":1,"dishName":"DishName","price":11.0}]
+"Order":[{"orderID":1,"waiterID":2,"time":"2019-02-05 12:00","order":[{"dishID":1,"dishName":"DishName","price":11.0}]}],
+"Person":[{"personID":3,"surname":"Sur","name":"Name","position":"pos"}]}
