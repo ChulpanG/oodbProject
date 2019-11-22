@@ -6,6 +6,8 @@ import com.google.gson.reflect.TypeToken;
 import lab1.Person;
 import lab1.Restoran;
 import lab3.XMLParser;
+import lab4.Database;
+import lab4.Product;
 import org.xml.sax.SAXException;
 
 import javax.xml.stream.XMLStreamException;
@@ -18,19 +20,19 @@ import java.util.List;
 public class NewJsonParser {
     public static void main(String[] args) throws IOException, SAXException, XPathExpressionException, XMLStreamException, Exception {
 
-        String fileJson = "/Users/culpan/Desktop/PeopleJavaJson.json";
-        String fileXML = "/Users/culpan/Desktop/Users.xml";
-        Restoran.createJson();
+        //String fileJson = "/Users/culpan/Desktop/PeopleJavaJson.json";
+        //String fileXML = "/Users/culpan/Desktop/Users.xml";
+        //Restoran.createJson();
         //Person[] person = (Person[]) parseJson("jsonPerson", "lab1.Person", "Person");
 
         //System.out.println(person);
         //Person prs = (Person) parseJson("jsonPerson", Person.class);
-        List<Person> list =  new ArrayList<>();
-        Person person = new Person(1,"Galimova","Chulpan","manager");
-        Person person1 = new Person(2,"G","CH","position");
-        list.add(person);
-        list.add(person1);
-        newJsonList("jsonPerson", list);
+        //List<Person> list =  new ArrayList<>();
+        //Person person = new Person(1,"Galimova","Chulpan","manager");
+        //Person person1 = new Person(2,"G","CH","position");
+        //list.add(person);
+        //list.add(person1);
+        //newJsonList("jsonPerson", list);
         //sortByCriteria("jsonPerson","lab1.Person");
 
         //JsonParser(fileJson,"person");
@@ -41,7 +43,17 @@ public class NewJsonParser {
         //XMLParser.XMLParser(fileXML);
         //XMLParser.XMLnew(fileXML);
         //XMLParser.XMLSortByName(fileXML);
-        XMLParser.XMLSearchObject("Алия",fileXML);
+        //XMLParser.XMLSearchObject("Алия",fileXML);
+
+        Product product = new Product(1,"pepper","p",1);
+
+        int i = 0;
+        Database database = new Database();
+        i = database.saveToDB(product);
+        database.loadFromDB();
+        database.searchInDB();
+        database.sortByASC();
+
     }
 
     /*public static Class[] parseJson(String fileName, String className, String chooseClassName) throws IOException, ClassNotFoundException {
