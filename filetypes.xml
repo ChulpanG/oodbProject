@@ -4,10 +4,13 @@
       <mapping pattern="PersonController" type="CLASS" />
       <mapping pattern="NewPerceptron" type="CLASS" />
       <mapping ext="personcontroller" type="CLASS" />
+      <mapping ext="vue" type="HTML" />
       <mapping pattern="Perceptron" type="JAVA" />
       <mapping pattern="JsonParser" type="JAVA" />
+      <mapping pattern="Order" type="JAVA" />
       <mapping pattern="DataPerceptron" type="JAVA" />
       <mapping pattern="Person" type="JAVA" />
+      <mapping pattern="jsonRest" type="JSON" />
     </extensionMap>
   </component>
 </application>
