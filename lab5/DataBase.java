@@ -7,7 +7,7 @@ public class DataBase {
     Auth auth = new Auth();
 
     class Auth {
-        String url = "jdbc:postgresql://localhost:5432/Restoran";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
         String login = "postgres";
         String password = "2121";
     }
@@ -27,14 +27,14 @@ public class DataBase {
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet resultSet = ps.executeQuery();
         while (resultSet.next()){
-            String order = resultSet.getString("orderid");
+            String order = resultSet.getString("id");
             System.out.println(order);
         }
     }
 
     public void getOrderById(int id) throws SQLException {
         Connection connection = DriverManager.getConnection(auth.url, auth.login, auth.password);
-        String sql = String.format("select * from orders where orderid = %s", id);
+        String sql = String.format("select * from orders where id = %s", id);
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet resultSet = ps.executeQuery();
         while (resultSet.next()){
@@ -50,7 +50,7 @@ public class DataBase {
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet resultSet = ps.executeQuery();
         while (resultSet.next()){
-            String order = resultSet.getString("orderid");
+            String order = resultSet.getString("id");
             System.out.println(order);
         }
     }
