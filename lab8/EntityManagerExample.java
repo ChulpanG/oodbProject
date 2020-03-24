@@ -81,8 +81,6 @@ public class EntityManagerExample {
             }
         }
 
-
-
     }
 
     public Connection getConnection() {
