@@ -1,12 +1,14 @@
-package lab8.model;
+package lab9.domain;
 
-import lab8.annotation.Column;
-import lab8.annotation.Entity;
+
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
-    @Column
-    public int id;
+    @Id
+    @GeneratedValue
+    public Long id;
     @Column
     public String surname;
     @Column
@@ -20,24 +22,10 @@ public class Person {
     @Column
     public int personalcode;
 
-    public Person(Integer id, String surname, String name, String position, String birthdate,
-                  String gender, Integer personalcode){
-        this.id = id;
-        this.surname = surname;
-        this.name = name;
-        this.position = position;
-        this.birthdate = birthdate;
-        this.gender = gender;
-        this.personalcode = personalcode;
-
-    }
-    public Person(){
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getSurname() {
